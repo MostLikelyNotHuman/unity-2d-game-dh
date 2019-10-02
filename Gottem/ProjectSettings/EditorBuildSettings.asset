@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/gottem.unity
+    guid: 10c20383c80722745b3f80a2a0832b25
+  - enabled: 1
+    path: Assets/Scenes/gottem level 2.unity
+    guid: d5345464ecf0283488602005f704ed26
   m_configObjects: {}

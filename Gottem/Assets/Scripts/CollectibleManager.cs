@@ -31,5 +31,9 @@ public class CollectibleManager : MonoBehaviour
     {
         _collectedGottem++;
         DisplayGottemCount();
+        if(_collectedGottem == _totalGottem)
+        {
+            YouWinGottemMenu.Instance.Show();
+        }
     }
 }
