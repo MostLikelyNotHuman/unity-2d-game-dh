@@ -36,7 +36,9 @@ public class CollectibleManager : MonoBehaviour
             YouWinGottemMenu.Instance.Show();
             SoundManager.Instance.PlayCoinCollectAllSound();
         }
-
-        SoundManager.Instance.PlayCoinCollectSound();
+        else
+        {
+            SoundManager.Instance.PlayCoinCollectSound();
+        }
     }
 }

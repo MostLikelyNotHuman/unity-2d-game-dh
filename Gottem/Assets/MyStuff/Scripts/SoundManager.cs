@@ -6,13 +6,12 @@ public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance;
 
-    public AudioSource collectOneAudioSource;
-
-    public AudioSource collectAllAudioSource;
+    public AudioSource audioSource;
+    public AudioSource winAudioSource;
 
     public AudioClip coinCollectSound;
-
     public AudioClip coinCollectAllSound;
+    public AudioClip deathSound;
 
     private void Awake()
     {
@@ -31,13 +30,22 @@ public class SoundManager : MonoBehaviour
 
     public void PlayCoinCollectSound()
     {
-        collectOneAudioSource.clip = coinCollectSound;
-        collectOneAudioSource.Play();
+        audioSource.clip = coinCollectSound;
+        audioSource.Play();
     }
 
     public void PlayCoinCollectAllSound()
     {
-        collectAllAudioSource.clip = coinCollectAllSound;
-        collectAllAudioSource.Play();
+        winAudioSource.clip = coinCollectAllSound;
+        winAudioSource.Play();
     }
+
+    public void PlayDeathSound()
+    {
+        audioSource.clip = deathSound;
+        audioSource.Play();
+    }
+
 }
+
+
