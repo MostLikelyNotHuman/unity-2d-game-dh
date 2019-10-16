@@ -34,6 +34,7 @@ public class CollectibleManager : MonoBehaviour
         if(_collectedGottem == _totalGottem)
         {
             YouWinGottemMenu.Instance.Show();
+            SoundManager.Instance.PlayCoinCollectAllSound();
         }
 
         SoundManager.Instance.PlayCoinCollectSound();

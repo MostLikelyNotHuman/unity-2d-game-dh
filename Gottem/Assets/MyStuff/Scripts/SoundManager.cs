@@ -6,9 +6,13 @@ public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance;
 
-    public AudioSource audioSource;
+    public AudioSource collectOneAudioSource;
+
+    public AudioSource collectAllAudioSource;
 
     public AudioClip coinCollectSound;
+
+    public AudioClip coinCollectAllSound;
 
     private void Awake()
     {
@@ -21,12 +25,19 @@ public class SoundManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
         Instance = this;
     }
 
     public void PlayCoinCollectSound()
     {
-        audioSource.clip = coinCollectSound;
-        audioSource.Play();
+        collectOneAudioSource.clip = coinCollectSound;
+        collectOneAudioSource.Play();
+    }
+
+    public void PlayCoinCollectAllSound()
+    {
+        collectAllAudioSource.clip = coinCollectAllSound;
+        collectAllAudioSource.Play();
     }
 }
