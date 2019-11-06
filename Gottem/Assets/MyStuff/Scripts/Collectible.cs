@@ -13,7 +13,7 @@ public class Collectible : MonoBehaviour
             HandleCollected();
         }
     }
-    void HandleCollected()
+    public virtual void HandleCollected()
     {
         _hasBeenCollected = true;
         CollectibleManager.Instance.HandleGottemCollected();
